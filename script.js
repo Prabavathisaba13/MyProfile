@@ -242,7 +242,7 @@ function renderPortfolio() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a href="/resume/praba_resume.pdf">Resume</a>
+          <a href="praba_resume.pdf" download>Resume</a>
         </div>
       </div>
     </footer>
