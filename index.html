@@ -1,346 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prabavathi S is an aspiring software developer sharing a professional portfolio with skills, certifications, and contact information." />
+    <meta name="theme-color" content="#f8f6ef" />
+    <title>Prabavathi S | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- EmailJS CDN script for contact form email delivery -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJS values are configured in script.js: EMAILJS_TEMPLATE_ID and EMAILJS_PUBLIC_KEY -->
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | PRABAVATHI S</title>
-    <!-- Google Fonts: Inter & Poppins -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Devicons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div id="particles-js"></div>
-
-    <header id="navbar">
-        <a href="#home" class="logo"><span>P</span>RABAVATHI</a>
-        <div class="menu-btn"><i class="fas fa-bars"></i></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn-hire">Hire Me</a>
+    <header class="site-header">
+      <a href="#home" class="brand">Prabavathi S</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-image-container left-col reveal">
-                <div class="hero-image-glow"></div>
-                <div class="image-wrapper">
-                    <img src="profile.png" alt="PRABAVATHI S Profile" class="hero-profile-img-rect">
-                    <div class="image-overlay"></div>
-                </div>
-            </div>
-            <div class="hero-content right-col reveal">
-                <p class="greeting-small">I'M</p>
-                <h1 class="hero-name-large">PRABAVATHI S</h1>
-                <h2 class="hero-subtitle">Creative <span>Developer & Designer</span></h2>
-                <p class="hero-tagline-short">Building modern digital experiences</p>
-                <div class="hero-cta-gold">
-                    <a href="#contact" class="btn btn-gold-outline">Contact Me</a>
-                    <a href="#" class="btn btn-gold-outline">Download Resume</a>
-                </div>
-            </div>
-        </section>
+    <main id="app"></main>
 
-        <!-- Vertical Socials -->
-        <div class="vertical-socials">
-            <a href="https://www.linkedin.com/in/prabavathi-s-a1653533b/" target="_blank" rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/Prabavathisaba13" target="_blank" rel="noopener noreferrer"
-                aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-        </div>
+    <button class="back-to-top" id="backToTop" aria-label="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-        <!-- About Section -->
-        <section id="about" class="about section-padding">
-            <div class="section-heading reveal">
-                <h2>About <span class="gradient-text">Me</span></h2>
-            </div>
-            <div class="about-content reveal">
-                <div class="about-image">
-                    <div class="glass-img">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                </div>
-                <div class="about-text glassmorphism">
-                    <h3>Who am I?</h3>
-                    <p>I am a passionate software engineer and UX/UI enthusiast. I love turning complex problems into
-                        elegant, modern, and user-friendly digital solutions.</p>
-                    <p>With a strong background in both frontend development and modern design systems, I bridge the gap
-                        between aesthetics and functionality.</p>
-                    <div class="about-stats">
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section / Featured Masterpiece -->
-        <section id="projects" class="featured-project section-padding">
-            <div class="section-heading reveal">
-                <h2>Featured <span class="gradient-text">Masterpiece</span></h2>
-            </div>
-
-            <div class="featured-container reveal">
-                <div class="featured-image-col">
-                    <div class="featured-image-glow"></div>
-                    <img src="workspace.png" alt="AIVPA Project Preview" class="featured-img">
-                </div>
-
-                <div class="featured-content-col">
-                    <h3 class="featured-title">AIVPA</h3>
-                    <h4 class="featured-subtitle">AI-Powered Virtual Productivity Assistant</h4>
-
-                    <p class="featured-desc">
-                        An intelligent productivity ecosystem that combines voice commands,
-                        AI insights, and automation to help professionals manage tasks and workflows more efficiently.
-                        Designed with a premium dark mode interface for seamless user experience.
-                    </p>
-
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Voice Control System</li>
-                        <li><i class="fas fa-check-circle"></i> Pomodoro Focus Timer</li>
-                        <li><i class="fas fa-check-circle"></i> Calendar Integration</li>
-                        <li><i class="fas fa-check-circle"></i> Smart Task Management</li>
-                        <li><i class="fas fa-check-circle"></i> Activity Tracking</li>
-                        <li><i class="fas fa-check-circle"></i> AI Context Chatbot</li>
-                    </ul>
-
-                    <div class="featured-cta">
-                        <a href="#" class="btn btn-gold-fill">Live Demo</a>
-                        <a href="#" class="btn btn-gold-outline-sm">Source Code</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section-padding">
-            <div class="section-heading reveal">
-                <h2>My <span class="gradient-text">Skills</span></h2>
-                <div class="heading-accent"></div>
-            </div>
-
-            <div class="ag-skills-grid reveal">
-                <!-- Skill 1 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-c-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">C</span>
-                </div>
-                <!-- Skill 2 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-javascript-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">JavaScript</span>
-                </div>
-                <!-- Skill 3 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-python-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">Python</span>
-                </div>
-                <!-- Skill 4 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-github-original"></i>
-                    </div>
-                    <span class="ag-skill-name">GitHub</span>
-                </div>
-                <!-- Skill 5 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-vscode-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">VS Code</span>
-                </div>
-                <!-- Skill 6 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-postgresql-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">PostgreSQL</span>
-                </div>
-                <!-- Skill 7 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-html5-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">HTML5</span>
-                </div>
-                <!-- Skill 8 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-css3-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">CSS3</span>
-                </div>
-                <!-- Skill 9 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <span class="ag-skill-name">AI Integration</span>
-                </div>
-                <!-- Skill 10 -->
-                <div class="ag-skill-card glass-card">
-                    <div class="ag-skill-icon-container">
-                        <i class="devicon-pycharm-plain"></i>
-                    </div>
-                    <span class="ag-skill-name">PyCharm</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications & Learning Section -->
-        <section id="certifications" class="certifications section-padding">
-            <div class="section-heading reveal">
-                <h2>Certifications & <span class="gradient-text">Courses</span></h2>
-                <p class="section-subtitle">Professional courses and certifications completed through NPTEL.</p>
-                <div class="heading-accent"></div>
-            </div>
-
-            <div class="cert-grid reveal">
-                <!-- Card 1 -->
-                <div class="cert-card glass-card">
-                    <div class="cert-badge">Completed</div>
-                    <div class="cert-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="cert-title">Java Programming – NPTEL</h3>
-                    <p class="cert-desc">Successfully completed the NPTEL course on Java Programming with a good grade.
-                        Gained strong understanding of object-oriented programming, Java syntax, and application
-                        development concepts.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="cert-card glass-card">
-                    <div class="cert-badge">Completed</div>
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3 class="cert-title">Cloud Computing – NPTEL</h3>
-                    <p class="cert-desc">Completed the NPTEL course on Cloud Computing with a good grade. Learned key
-                        concepts such as cloud architecture, virtualization, distributed systems, and cloud services.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="cert-card glass-card">
-                    <div class="cert-badge pursuing">Currently Pursuing</div>
-                    <div class="cert-icon">
-                        <i class="fas fa-book-reader"></i>
-                    </div>
-                    <h3 class="cert-title">Internet of Things (IoT) – NPTEL</h3>
-                    <p class="cert-desc">Currently pursuing the NPTEL course on Internet of Things, focusing on
-                        connected devices, sensors, embedded systems, and smart technology applications.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Learning Journey -->
-        <section class="testimonials section-padding">
-            <div class="section-heading reveal">
-                <h2>Learning <span class="gradient-text">Journey</span></h2>
-            </div>
-            <div class="testimonial-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="testimonial-card glass-card reveal">
-                    <div class="quote-icon" style="color: #facc15;"><i class="fas fa-laptop-code"></i></div>
-                    <h4 style="color: #facc15; margin-bottom: 12px; font-size: 1.1rem;">Web Development Learning</h4>
-                    <p>Learning and practicing modern web development technologies such as HTML, CSS, JavaScript, and
-                        responsive design while building real-world projects.</p>
-                </div>
-                <div class="testimonial-card glass-card reveal">
-                    <div class="quote-icon" style="color: #facc15;"><i class="fas fa-code"></i></div>
-                    <h4 style="color: #facc15; margin-bottom: 12px; font-size: 1.1rem;">Programming Practice</h4>
-                    <p>Improving programming and problem-solving skills using languages like Python and C while
-                        exploring AI tools and modern development environments.</p>
-                </div>
-                <div class="testimonial-card glass-card reveal">
-                    <div class="quote-icon" style="color: #facc15;"><i class="fas fa-folder-open"></i></div>
-                    <h4 style="color: #facc15; margin-bottom: 12px; font-size: 1.1rem;">Portfolio & Personal Projects
-                    </h4>
-                    <p>Developing personal projects and a portfolio website to showcase creativity, technical skills,
-                        and continuous learning in software development.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section-padding">
-            <div class="section-heading reveal">
-                <h2>Get In <span class="gradient-text">Touch</span></h2>
-            </div>
-            <div class="contact-container reveal">
-                <div class="contact-info glassmorphism"
-                    style="margin-bottom: 40px; display: flex; flex-direction: column; gap: 20px;">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:prabavathikayal305@gmail.com">prabavathikayal305@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+91 7010654183">+91 7010654183</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>COIMBATORE,Tamil Nadu</span>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-bottom: 50px;">
-                    <a href="#contact-form" class="btn btn-primary"
-                        onclick="document.getElementById('contact-form').style.display = 'flex';">Let's Work Together
-                        &rarr;</a>
-                </div>
-                <!-- Contact form initially hidden, will scroll to or just display below -->
-                <form id="contact-form" class="contact-form glassmorphism"
-                    style="display: none; scroll-margin-top: 100px;">
-                    <h3>Send me a message</h3>
-                    <div class="input-group">
-                        <input type="text" id="name" required placeholder=" ">
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="gmail" id="gmail" required placeholder=" ">
-                        <label for="gmail">Your Gmail</label>
-                    </div>
-                    <div class="input-group">
-                        <textarea id="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i
-                            class="fas fa-paper-plane"></i></button>
-                </form>
-                <div class="social-links" style="justify-content: center; margin-top: 40px;">
-                    <a href="https://github.com/Prabavathisaba13" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub Profile" class="github-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/prabavathi-s-a1653533b/" target="_blank"
-                        rel="noopener noreferrer" aria-label="LinkedIn Profile" class="linkedin-link"><i
-                            class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> PRABAVATHI S. Designed & Built with passion.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
