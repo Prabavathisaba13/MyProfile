@@ -119,7 +119,7 @@ function renderPortfolio() {
           <p>${portfolioData.summary}</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
-            <a class="btn btn-secondary" href="resume/praba_resume.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
+            <a class="btn btn-secondary" href="praba_resume.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
           </div>
           <div class="hero-socials">
             ${portfolioData.socialLinks.map(link => `<a href="${link.href}" target="_blank" rel="noreferrer" aria-label="${link.label}"><i class="${link.icon}"></i></a>`).join('')}
