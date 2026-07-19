@@ -50,11 +50,12 @@ const portfolioData = {
     file: "nptel cloud_computing certificate.pdf"
   },
     {
-      title: 'The Joy of Computing using Python (Elite – 65%)',
-      organization: 'NPTEL (SWAYAM)',
-      status: 'Completed',
-      description: 'Completed an acclaimed Python course with strong academic performance.'
-    }
+  title: 'The Joy of Computing using Python (Elite – 65%)',
+  organization: 'NPTEL (SWAYAM)',
+  status: 'Completed',
+  description: 'Completed an acclaimed Python course with strong academic performance.',
+  file: 'joy_of_python.png'
+}
   ],
   focusAreas: [
     {
