@@ -21,30 +21,34 @@ const portfolioData = {
     { group: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Figma'] }
   ],
   certifications: [
-    {
-      title: 'Monetize Your Mind Workshop',
-      organization: 'AIC RAISE',
-      status: 'Completed',
-      description: 'Completed a focused workshop on personal growth, mindset, and professional development.'
-    },
-    {
-      title: 'AWS Certified Cloud Practitioner (CLF-C02)',
-      organization: 'LinkedIn Learning',
-      status: 'Completed',
-      description: 'Built a foundational understanding of AWS cloud concepts and services.'
-    },
-    {
-      title: 'Artificial Intelligence Foundations: Machine Learning',
-      organization: 'LinkedIn Learning',
-      status: 'Completed',
-      description: 'Explored core machine learning principles and practical AI foundations.'
-    },
-    {
-      title: 'Cloud Computing',
-      organization: 'NPTEL (SWAYAM)',
-      status: 'Completed',
-      description: 'Completed a structured course covering cloud concepts and related technologies.'
-    },
+  {
+    title: "Monetize Your Mind Workshop",
+    organization: "AIC RAISE",
+    status: "Completed",
+    description: "Completed a focused workshop on personal growth, mindset, and professional development.",
+    file: "aicraise_workshop.jpeg"
+  },
+  {
+    title: "AWS Certified Cloud Practitioner (CLF-C02)",
+    organization: "LinkedIn Learning",
+    status: "Completed",
+    description: "Built a foundational understanding of AWS cloud concepts and services.",
+    file: "CertificateOfCompletion_AWS Certified Cloud Practitioner CLFC02 Cert Prep (1).pdf"
+  },
+  {
+    title: "Artificial Intelligence Foundations: Machine Learning",
+    organization: "LinkedIn Learning",
+    status: "Completed",
+    description: "Explored core machine learning principles and practical AI foundations.",
+    file: "CertificateOfCompletion_Artificial Intelligence Foundations Machine Learning.pdf"
+  },
+  {
+    title: "Cloud Computing",
+    organization: "NPTEL (SWAYAM)",
+    status: "Completed",
+    description: "Completed a structured course covering cloud concepts and related technologies.",
+    file: "nptel cloud_computing certificate.pdf"
+  },
     {
       title: 'The Joy of Computing using Python (Elite – 65%)',
       organization: 'NPTEL (SWAYAM)',
@@ -177,7 +181,11 @@ function renderPortfolio() {
       </div>
       <div class="cert-grid">
         ${portfolioData.certifications.map(cert => `
-          <article class="card cert-card">
+         <article
+  class="card cert-card"
+  onclick="window.open('${cert.file}', '_blank')"
+  style="cursor:pointer;"
+>
             <div class="cert-badge"><i class="fa-solid fa-award"></i>${cert.status}</div>
             <h3>${cert.title}</h3>
             <div class="cert-meta">${cert.organization}</div>
